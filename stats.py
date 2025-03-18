@@ -14,3 +14,14 @@ def number_of_letters(book):
     
     return letter
         
+def sort_on(dict):
+    return dict["count"]
+
+def sorted_dictionaries(letter):
+    sorted_letter = []
+    for char, count in letter.items():
+        char_info = {"char": char, "count": count}
+        sorted_letter.append(char_info)
+    sorted_letter.sort(reverse=True, key=sort_on)
+    return sorted_letter
+
